@@ -1,0 +1,22 @@
+$text-align-list: left, center, right;
+$font-size-list: 10px 16px 32px 64px;
+$font-weight-list: 100 400 500 900;
+
+@each $align in $text-align-list {
+  .text-#{$align} {
+    text-align: #{$align};
+    margin: 2rem;
+  }
+}
+
+@each $size in $font-size-list {
+  .fs-#{$size} {
+    font-size: #{$size};
+  }
+}
+
+@each $weight in $font-weight-list {
+  .fw-#{$weight} {
+    font-weight: #{$weight};
+  }
+}

@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  margin-left: 1rem;
+  li {
+    list-style-type: none;
+  }
+}
+
+h1 {
+  a {
+    text-decoration: none;
+    color: black;
+    &:hover {
+      color: red;
+    }
+  }
+}
+
+li {
+  &:first-child {
+    color: red;
+  }
+  &:last-child {
+    color: blue;
+  }
+}

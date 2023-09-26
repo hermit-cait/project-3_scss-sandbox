@@ -1,0 +1,25 @@
+/* Comment CSS*/
+
+// Comment SCSS
+
+/* Variables */
+
+$primary-color: #7633f9;
+$secondary-color: #ff9800;
+$success-color: #28a745;
+$danger-color: #dc3545;
+$warning-color: #ffc107;
+$info-color: #17a2b8;
+
+// Font sizes
+
+$fs-small: 10px;
+
+ul {
+  li {
+    &:first-child {
+      color: $danger-color;
+      font-size: $fs-small;
+    }
+  }
+}
