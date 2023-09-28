@@ -1,0 +1,18 @@
+$size-map:(
+  small: 0.75rem,
+  medium: 1.25rem,
+  large: 1.85rem,
+);
+
+@function getSize($size){
+  @return map-get($size-map, $size);
+}
+
+.alert-success {
+  padding: getSize(medium);
+}
+
+.alert-warning {
+  padding: getSize(small) getSize(large);
+  margin: getSize(medium) getSize(small);
+}

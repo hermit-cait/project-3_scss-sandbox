@@ -1,0 +1,42 @@
+$alert-bg-color-map:(
+  success: $success-color,
+  danger: #dc3545,
+  warning: $warning-color,
+  info: #17a2b8,
+);
+
+.alert-success {
+  background-color: map-get($map: $alert-bg-color-map, $key: success);
+}
+
+.alert-danger {
+  background-color: map-get($alert-bg-color-map, danger);
+}
+
+$alert-text-color-map:(
+  text-light: #f8f9fa,
+  text-dark: #343a40,
+  text-black: #000000,
+);
+
+$alert-colors-map: map-merge(
+  $map1: $alert-bg-color-map, 
+  $map2: $alert-text-color-map,
+);
+
+// .alert-danger {
+//   color: map-get($alert-text-color-map, text-light);
+// }
+
+// .alert-warning {
+//   background-color: map-get($map: $alert-bg-color-map, $key: warning);
+//   color: map-get($alert-text-color-map, text-dark);
+// }
+
+// /* Classes generated from maps */
+
+// @each $name, $color in $alert-colors-map {
+//   .alert-#{$name} {
+//     background-color: $color;
+//   }
+// }
