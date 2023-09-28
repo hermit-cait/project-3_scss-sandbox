@@ -1,8 +1,8 @@
 $alert-bg-color-map:(
   success: $success-color,
-  danger: #dc3545,
+  danger: $danger-color,
   warning: $warning-color,
-  info: #17a2b8,
+  info: $info-color,
 );
 
 .alert-success {

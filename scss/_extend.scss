@@ -1,0 +1,43 @@
+.btn {
+  padding: 10px 20px;
+  font-size: 28px;
+  line-height: 1.5;
+  border-radius: 3px;
+  color: #fff;
+  background-color: #bbb;
+  border: none;
+  &:hover {
+    cursor: pointer;
+    transition: 0.3s ease;
+    background-color: invert($color: #fff);
+  }
+  &-start {
+    background-color: $success-color;
+    &:hover {
+      background-color: invert($color: $success-color);
+    }
+  }
+}
+
+hr {
+  width: 10rem;
+  height: 3px;
+  background-color: black;
+  border: none;
+  margin: 1rem;
+}
+
+.btn-stop {
+  @extend .btn;
+  background-color: $danger-color;
+}
+
+$btn-type-list: success, danger, warning, info;
+
+@each $btn-type in $btn-type-list {
+  .btn-#{$btn-type} {
+    @extend .btn;
+    background-color: map-get($alert-colors-map, #{$btn-type});
+  }
+}
+
